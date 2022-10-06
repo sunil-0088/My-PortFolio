@@ -23,24 +23,21 @@ class NavbarLogoMob extends StatelessWidget {
   Widget build(BuildContext context) {
     return SizedBox(
         height: 80,
-        width: 200,
+        // width: 2,
         child: Row(
           children: [
             const Text(
               '<',
               style: TextStyle(fontSize: 20),
             ),
-            Text('Sunil Kumar Nagar',
+            Text('Sunil Nagar',
                 style: GoogleFonts.lobster(
                   textStyle: const TextStyle(
                     color: Colors.blueAccent,
                     fontSize: 20,
                   ),
                 )),
-            const Text(
-              '/',
-              style: TextStyle(color: Colors.grey, fontSize: 20),
-            ),
+           
             const Text(
               '>',
               style: TextStyle(fontSize: 20),
@@ -64,7 +61,7 @@ class NavbarLogoDesk extends StatelessWidget {
               '<',
               style: TextStyle(fontSize: 30),
             ),
-            Text('Sunil Kumar Nagar',
+            Text('Sunil Nagar',
                 style: GoogleFonts.lobster(
                   textStyle: const TextStyle(
                     color: Colors.blueAccent,

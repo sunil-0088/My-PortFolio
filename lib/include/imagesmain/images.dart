@@ -1,4 +1,4 @@
-import 'package:my_portfolio/configure/colors.dart';
+
 import 'package:flutter/material.dart';
 
 class OneDesk extends StatelessWidget {
@@ -13,6 +13,8 @@ class OneDesk extends StatelessWidget {
 }
 
 class OneMob extends StatelessWidget {
+  const OneMob({super.key});
+
   @override
   Widget build(BuildContext context) {
     return  Container(
@@ -25,9 +27,11 @@ class OneMob extends StatelessWidget {
 }
 
 class OneTab extends StatelessWidget {
+  const OneTab({super.key});
+
   @override
   Widget build(BuildContext context) {
-    return  Container(
+    return  SizedBox(
       width: 600,
       child: Image.asset('assets/images/one.png')
     );
@@ -35,6 +39,8 @@ class OneTab extends StatelessWidget {
 }
 
 class TwoDesk extends StatelessWidget {
+  const TwoDesk({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Container(

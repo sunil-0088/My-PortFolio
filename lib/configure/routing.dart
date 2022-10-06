@@ -1,16 +1,19 @@
 import 'package:my_portfolio/configure/centeredview.dart';
 import 'package:my_portfolio/include/CenteringOfPages/ContactCenter.dart';
+
 import 'package:my_portfolio/include/CenteringOfPages/Education.dart';
 import 'package:my_portfolio/include/Rows/contactpagemain.dart';
 import 'package:my_portfolio/pages/achievementspage.dart';
 import 'package:my_portfolio/pages/blogpage.dart';
 import 'package:my_portfolio/pages/contactpage.dart';
 import 'package:my_portfolio/pages/homepage.dart';
-import 'package:my_portfolio/pages/progresspage.dart';
+
 import 'package:my_portfolio/pages/skillspage.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:responsive_builder/responsive_builder.dart';
+
+import '../pages/progresspage.dart';
 
 const String SkillsRoute = 'skills';
 const String ProjectsRoute = 'projects';
@@ -27,25 +30,25 @@ Route<dynamic>? generateRoute(RouteSettings settings) {
     case SkillsRoute:
       return _getPageRoute(
           ScreenTypeLayout(
-            desktop: CenteredViewDesk(child: SkillsPage()),
-            tablet: CenteredViewTab(child: SkillsPage()),
-            mobile: CenteredViewMob(child: SkillsPage()),
+            desktop: CenteredViewDesk(child: ProgressPage()),
+            tablet: CenteredViewTab(child: ProgressPage()),
+            mobile: CenteredViewMob(child: ProgressPage()),
           ),
           settings.name!);
-    case ProjectsRoute:
-      return _getPageRoute(
-          ScreenTypeLayout(
-            desktop: const CenteredViewDesk(
-              child: BlogPage(),
-            ),
-            tablet: const CenteredViewTab(
-              child: BlogPage(),
-            ),
-            mobile: const CenteredViewMob(
-              child: BlogPage(),
-            ),
-          ),
-          settings.name!);
+    // case ProjectsRoute:
+    //   return _getPageRoute(
+    //       ScreenTypeLayout(
+    //         desktop: const CenteredViewDesk(
+    //           child: BlogPage(),
+    //         ),
+    //         tablet: const CenteredViewTab(
+    //           child: BlogPage(),
+    //         ),
+    //         mobile: const CenteredViewMob(
+    //           child: BlogPage(),
+    //         ),
+    //       ),
+    //       settings.name!);
     case EducationRoute:
       return _getPageRoute(
           ScreenTypeLayout(
@@ -71,25 +74,25 @@ Route<dynamic>? generateRoute(RouteSettings settings) {
     case ContactRoute:
       return _getPageRoute(
           ScreenTypeLayout(
-            desktop: const CenteredViewDesk(child: ContactPageDesk()),
+            desktop: CenteredViewDesk(child: ContactCenterDesk()),
             tablet: CenteredViewTab(child: ContactPage()),
             mobile: CenteredViewMob(child: ContactPage()),
           ),
           settings.name!);
-    case BlogRoute:
-      return _getPageRoute(
-          ScreenTypeLayout(
-            desktop: const CenteredViewDesk(
-              child: BlogPage(),
-            ),
-            tablet: const CenteredViewTab(
-              child: BlogPage(),
-            ),
-            mobile: const CenteredViewMob(
-              child: BlogPage(),
-            ),
-          ),
-          settings.name!);
+    // case BlogRoute:
+    //   return _getPageRoute(
+    //       ScreenTypeLayout(
+    //         desktop: const CenteredViewDesk(
+    //           child: BlogPage(),
+    //         ),
+    //         tablet: const CenteredViewTab(
+    //           child: BlogPage(),
+    //         ),
+    //         mobile: const CenteredViewMob(
+    //           child: BlogPage(),
+    //         ),
+    //       ),
+    //       settings.name!);
     default:
       _getPageRoute(const HomePage(), settings.name!);
   }

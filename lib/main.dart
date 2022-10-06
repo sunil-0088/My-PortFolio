@@ -23,16 +23,14 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return AdaptiveTheme(
       light: ThemeData(
+        useMaterial3: true,
         brightness: Brightness.light,
-        primarySwatch: Colors.red,
-        accentColor: Colors.amber,
       ),
       dark: ThemeData(
+        useMaterial3: true,
         backgroundColor: Colors.black,
         scaffoldBackgroundColor: Colors.black,
         brightness: Brightness.dark,
-        primarySwatch: Colors.red,
-        accentColor: Colors.amber,
       ),
       initial: AdaptiveThemeMode.light,
       builder: (theme, darkTheme) => MaterialApp(

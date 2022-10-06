@@ -9,16 +9,16 @@ class EduDesk extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Text(
+          const Text(
             'Education',
             style: TextStyle(fontWeight: FontWeight.w600, fontSize: 50),
           ),
-          SizedBox(
+          const SizedBox(
             height: 30,
           ),
           Row(
             children: [
-              SizedBox(
+              const SizedBox(
                 width: 15,
               ),
               Container(
@@ -31,58 +31,49 @@ class EduDesk extends StatelessWidget {
                       color: Colors.black.withOpacity(0.1),
                       blurRadius: 15.0,
                       spreadRadius: 5.0,
-                      offset: Offset(
+                      offset: const Offset(
                         0.0, // Move to right 10  horizontally
                         10.0, // Move to bottom 10 Vertically
                       ),
                     ),
                   ],
                   shape: BoxShape.circle,
-                  image: DecorationImage(
+                  image: const DecorationImage(
                     fit: BoxFit.fill,
-                    image: AssetImage('assets/images/gitam.png'),
+                    image: AssetImage('assets/images/Mnit_logo.png'),
                   ),
                 ),
-                //child: Image.asset('assets/images/gitam.png'),
               ),
-              SizedBox(
+              const SizedBox(
                 width: 20,
               ),
               Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
+                children: const [
                   Text(
-                    "GITAM University, Hyderabad",
+                    "Malaviya National Institute of Technology Jaipur",
                     style: TextStyle(fontSize: 28, fontWeight: FontWeight.bold),
                   ),
                   Text(
-                    "Bachelor's in Computer Science Engineering",
+                    "Bachelor's in Civil Engineering",
                     style: TextStyle(fontSize: 26, fontWeight: FontWeight.w600),
                   ),
                   Text(
-                    "2017 - 2021",
+                    "2019 - 2023",
                     style: TextStyle(
                       fontSize: 22,
-                    ),
-                  ),
-                  SizedBox(
-                    // width: MediaQuery.of(context).size.width * .8,
-                    child: const Text(
-                      "•  Participated in Rural Development and Social E",
-                      overflow: TextOverflow.ellipsis,
-                      style: TextStyle(fontSize: 22, color: Colors.grey),
                     ),
                   ),
                 ],
               )
             ],
           ),
-          SizedBox(
+          const SizedBox(
             height: 30,
           ),
           Row(
             children: [
-              SizedBox(
+              const SizedBox(
                 width: 15,
               ),
               Container(
@@ -95,36 +86,36 @@ class EduDesk extends StatelessWidget {
                       color: Colors.black.withOpacity(0.1),
                       blurRadius: 15.0,
                       spreadRadius: 5.0,
-                      offset: Offset(
+                      offset: const Offset(
                         0.0, // Move to right 10  horizontally
                         10.0, // Move to bottom 10 Vertically
                       ),
                     ),
                   ],
                   shape: BoxShape.circle,
-                  image: DecorationImage(
+                  image: const DecorationImage(
                     fit: BoxFit.fill,
-                    image: AssetImage('assets/images/narayana.png'),
+                    image: AssetImage('assets/images/high_sch.jpg'),
                   ),
                 ),
                 //child: Image.asset('assets/images/gitam.png'),
               ),
-              SizedBox(
+              const SizedBox(
                 width: 20,
               ),
               Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
+                children: const [
                   Text(
-                    "Narayana Junior College, Hyderabad",
+                    "SHRI GANESH SR. SEC. SCHOOL BARAN",
                     style: TextStyle(fontSize: 28, fontWeight: FontWeight.bold),
                   ),
                   Text(
-                    "Board of Intermediate Education Telangana",
+                    "Rajasthan Board of Secondary Education",
                     style: TextStyle(fontSize: 26, fontWeight: FontWeight.w600),
                   ),
                   Text(
-                    "2015 - 2017",
+                    "High School: 2019",
                     style: TextStyle(
                       fontSize: 22,
                     ),
@@ -133,12 +124,12 @@ class EduDesk extends StatelessWidget {
               )
             ],
           ),
-          SizedBox(
+          const SizedBox(
             height: 30,
           ),
           Row(
             children: [
-              SizedBox(
+              const SizedBox(
                 width: 15,
               ),
               Container(
@@ -151,36 +142,36 @@ class EduDesk extends StatelessWidget {
                       color: Colors.black.withOpacity(0.1),
                       blurRadius: 15.0,
                       spreadRadius: 5.0,
-                      offset: Offset(
+                      offset: const Offset(
                         0.0, // Move to right 10  horizontally
                         10.0, // Move to bottom 10 Vertically
                       ),
                     ),
                   ],
                   shape: BoxShape.circle,
-                  image: DecorationImage(
+                  image: const DecorationImage(
                     fit: BoxFit.fill,
-                    image: AssetImage('assets/images/school.png'),
+                    image: AssetImage('assets/images/int_sch.jpg'),
                   ),
                 ),
                 //child: Image.asset('assets/images/gitam.png'),
               ),
-              SizedBox(
+              const SizedBox(
                 width: 20,
               ),
               Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
+                children: const [
                   Text(
-                    "St. John's High School, Karimnagar",
+                    "MAA SHARDHA SR. SEC. SCHOOL BARAN",
                     style: TextStyle(fontSize: 28, fontWeight: FontWeight.bold),
                   ),
                   Text(
-                    "Board of Secondary Education Telangana",
+                    "Rajasthan Board of Secondary Education",
                     style: TextStyle(fontSize: 26, fontWeight: FontWeight.w600),
                   ),
                   Text(
-                    "2015",
+                    "Intermediate: 2016",
                     style: TextStyle(
                       fontSize: 22,
                     ),
@@ -189,7 +180,7 @@ class EduDesk extends StatelessWidget {
               )
             ],
           ),
-          SizedBox(
+          const SizedBox(
             height: 30,
           ),
         ],
@@ -208,24 +199,24 @@ class EduTab extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Text(
+            const Text(
               'Education',
               style: TextStyle(fontWeight: FontWeight.w600, fontSize: 50),
             ),
-            SizedBox(
+            const SizedBox(
               height: 10,
             ),
             SingleChildScrollView(
               scrollDirection: Axis.vertical,
               child: Column(
                 children: [
-                  SizedBox(
+                  const SizedBox(
                     width: 15,
                   ),
                   Center(
                     child: Container(
-                      margin: EdgeInsets.all(10.0),
-                      padding: EdgeInsets.all(10.0),
+                      margin: const EdgeInsets.all(10.0),
+                      padding: const EdgeInsets.all(10.0),
                       height: 150,
                       width: 150,
                       alignment: Alignment.centerLeft,
@@ -235,19 +226,18 @@ class EduTab extends StatelessWidget {
                             color: Colors.black.withOpacity(0.1),
                             blurRadius: 10.0,
                             spreadRadius: 5.0,
-                            offset: Offset(
+                            offset: const Offset(
                               0.0, // Move to right 10  horizontally
                               10.0, // Move to bottom 10 Vertically
                             ),
                           ),
                         ],
                         shape: BoxShape.circle,
-                        image: DecorationImage(
+                        image: const DecorationImage(
                           fit: BoxFit.fill,
-                          image: AssetImage('assets/images/gitam.png'),
+                          image: AssetImage('assets/images/Mnit_logo.png'),
                         ),
                       ),
-                      //child: Image.asset('assets/images/gitam.png'),
                     ),
                   ),
                 ],
@@ -256,29 +246,25 @@ class EduTab extends StatelessWidget {
             Center(
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.center,
-                children: [
+                children: const [
                   Text(
-                    "GITAM University, Hyderabad",
+                    "Malaviya National Institute of Technology Jaipur",
                     style: TextStyle(fontSize: 26, fontWeight: FontWeight.bold),
                   ),
                   Text(
-                    "Bachelor's in Computer Science Engineering",
+                    "Bachelor's in Civil Engineering",
                     style: TextStyle(fontSize: 20, fontWeight: FontWeight.w600),
                   ),
                   Text(
-                    "2017 - 2021",
+                    "2019 - 2023",
                     style: TextStyle(
                       fontSize: 22,
                     ),
                   ),
-                  Text(
-                    "•  Participated in Rural Development and Social Events as Student Volunteer in NSS for 2 years",
-                    style: TextStyle(fontSize: 22, color: Colors.grey),
-                  ),
                 ],
               ),
             ),
-            SizedBox(
+            const SizedBox(
               height: 20,
             ),
             //Narayana
@@ -286,13 +272,13 @@ class EduTab extends StatelessWidget {
               scrollDirection: Axis.vertical,
               child: Column(
                 children: [
-                  SizedBox(
+                  const SizedBox(
                     width: 15,
                   ),
                   Center(
                     child: Container(
-                      margin: EdgeInsets.all(10.0),
-                      padding: EdgeInsets.all(10.0),
+                      margin: const EdgeInsets.all(10.0),
+                      padding: const EdgeInsets.all(10.0),
                       height: 150,
                       width: 150,
                       alignment: Alignment.centerLeft,
@@ -302,16 +288,16 @@ class EduTab extends StatelessWidget {
                             color: Colors.black.withOpacity(0.1),
                             blurRadius: 10.0,
                             spreadRadius: 5.0,
-                            offset: Offset(
+                            offset: const Offset(
                               0.0, // Move to right 10  horizontally
                               10.0, // Move to bottom 10 Vertically
                             ),
                           ),
                         ],
                         shape: BoxShape.circle,
-                        image: DecorationImage(
+                        image: const DecorationImage(
                           fit: BoxFit.fill,
-                          image: AssetImage('assets/images/narayana.png'),
+                          image: AssetImage('assets/images/high_sch.jpg'),
                         ),
                       ),
                       //child: Image.asset('assets/images/gitam.png'),
@@ -323,9 +309,9 @@ class EduTab extends StatelessWidget {
             Center(
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.center,
-                children: [
+                children: const [
                   Text(
-                    "Narayana Junior College, Hyderabad",
+                    "SHRI GANESH SR. SEC. SCHOOL BARAN",
                     style: TextStyle(fontSize: 26, fontWeight: FontWeight.bold),
                   ),
                   Text(
@@ -333,7 +319,7 @@ class EduTab extends StatelessWidget {
                     style: TextStyle(fontSize: 20, fontWeight: FontWeight.w600),
                   ),
                   Text(
-                    "2015 - 2017",
+                    "High School: 2019",
                     style: TextStyle(
                       fontSize: 22,
                     ),
@@ -341,7 +327,7 @@ class EduTab extends StatelessWidget {
                 ],
               ),
             ),
-            SizedBox(
+            const SizedBox(
               height: 20,
             ),
             //SCHOOL
@@ -349,13 +335,13 @@ class EduTab extends StatelessWidget {
               scrollDirection: Axis.vertical,
               child: Column(
                 children: [
-                  SizedBox(
+                  const SizedBox(
                     width: 15,
                   ),
                   Center(
                     child: Container(
-                      margin: EdgeInsets.all(10.0),
-                      padding: EdgeInsets.all(10.0),
+                      margin: const EdgeInsets.all(10.0),
+                      padding: const EdgeInsets.all(10.0),
                       height: 150,
                       width: 150,
                       alignment: Alignment.centerLeft,
@@ -365,16 +351,16 @@ class EduTab extends StatelessWidget {
                             color: Colors.black.withOpacity(0.1),
                             blurRadius: 10.0,
                             spreadRadius: 5.0,
-                            offset: Offset(
+                            offset: const Offset(
                               0.0, // Move to right 10  horizontally
                               10.0, // Move to bottom 10 Vertically
                             ),
                           ),
                         ],
                         shape: BoxShape.circle,
-                        image: DecorationImage(
+                        image: const DecorationImage(
                           fit: BoxFit.fill,
-                          image: AssetImage('assets/images/school.png'),
+                          image: AssetImage('assets/images/int_sch.jpg'),
                         ),
                       ),
                       //child: Image.asset('assets/images/gitam.png'),
@@ -386,17 +372,17 @@ class EduTab extends StatelessWidget {
             Center(
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.center,
-                children: [
+                children: const [
                   Text(
-                    "St. John's High School, Karimnagar",
+                    "MAA SHARDHA SR. SEC. SCHOOL BARAN",
                     style: TextStyle(fontSize: 26, fontWeight: FontWeight.bold),
                   ),
                   Text(
-                    "Board of Secondary Education Telangana",
+                    "Rajasthan Board of Secondary Education",
                     style: TextStyle(fontSize: 20, fontWeight: FontWeight.w600),
                   ),
                   Text(
-                    "2015",
+                    "Intermediate: 2016",
                     style: TextStyle(
                       fontSize: 22,
                     ),
@@ -404,7 +390,7 @@ class EduTab extends StatelessWidget {
                 ],
               ),
             ),
-            SizedBox(
+            const SizedBox(
               height: 20,
             ),
           ],
@@ -423,11 +409,11 @@ class EduMob extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Text(
+          const Text(
             'Education',
             style: TextStyle(fontWeight: FontWeight.w600, fontSize: 32),
           ),
-          SizedBox(
+          const SizedBox(
             height: 10,
           ),
           SingleChildScrollView(
@@ -437,8 +423,8 @@ class EduMob extends StatelessWidget {
                 children: [
                   Center(
                     child: Container(
-                      margin: EdgeInsets.all(10),
-                      padding: EdgeInsets.all(5.0),
+                      margin: const EdgeInsets.all(10),
+                      padding: const EdgeInsets.all(5.0),
                       height: 100,
                       width: 100,
                       alignment: Alignment.center,
@@ -448,19 +434,18 @@ class EduMob extends StatelessWidget {
                             color: Colors.black.withOpacity(0.1),
                             blurRadius: 10.0,
                             spreadRadius: 5.0,
-                            offset: Offset(
+                            offset: const Offset(
                               0.0, // Move to right 10  horizontally
                               10.0, // Move to bottom 10 Vertically
                             ),
                           ),
                         ],
                         shape: BoxShape.circle,
-                        image: DecorationImage(
+                        image: const DecorationImage(
                           fit: BoxFit.fill,
-                          image: AssetImage('assets/images/gitam.png'),
+                          image: AssetImage('assets/images/Mnit_logo.png'),
                         ),
                       ),
-                      //child: Image.asset('assets/images/gitam.png'),
                     ),
                   ),
                 ],
@@ -471,29 +456,29 @@ class EduMob extends StatelessWidget {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.center,
               mainAxisAlignment: MainAxisAlignment.center,
-              children: [
+              children: const [
                 Text(
-                  "GITAM University, Hyderabad",
-                  style: TextStyle(fontSize: 22, fontWeight: FontWeight.bold),
+                  "Malaviya National Institute of Technology Jaipur",
+                  textAlign: TextAlign.center,
+                  style: TextStyle(
+                    fontSize: 22,
+                    fontWeight: FontWeight.bold,
+                  ),
                 ),
                 Text(
-                  "Bachelor's in Computer Science Engineering",
+                  "Bachelor's in Civil Engineering",
                   style: TextStyle(fontSize: 18, fontWeight: FontWeight.w600),
                 ),
                 Text(
-                  "2017 - 2021",
+                  "2019 - 2023",
                   style: TextStyle(
                     fontSize: 17,
                   ),
                 ),
-                Text(
-                  "•  Participated in Rural Development and Social Events as Student Volunteer in NSS for 2 years",
-                  style: TextStyle(fontSize: 17, color: Colors.grey),
-                ),
               ],
             ),
           ),
-          SizedBox(
+          const SizedBox(
             height: 20,
           ),
           SingleChildScrollView(
@@ -503,8 +488,8 @@ class EduMob extends StatelessWidget {
                 children: [
                   Center(
                     child: Container(
-                      margin: EdgeInsets.all(10),
-                      padding: EdgeInsets.all(5.0),
+                      margin: const EdgeInsets.all(10),
+                      padding: const EdgeInsets.all(5.0),
                       height: 100,
                       width: 100,
                       alignment: Alignment.center,
@@ -514,16 +499,16 @@ class EduMob extends StatelessWidget {
                             color: Colors.black.withOpacity(0.1),
                             blurRadius: 10.0,
                             spreadRadius: 5.0,
-                            offset: Offset(
+                            offset: const Offset(
                               0.0, // Move to right 10  horizontally
                               10.0, // Move to bottom 10 Vertically
                             ),
                           ),
                         ],
                         shape: BoxShape.circle,
-                        image: DecorationImage(
+                        image: const DecorationImage(
                           fit: BoxFit.fill,
-                          image: AssetImage('assets/images/narayana.png'),
+                          image: AssetImage('assets/images/high_sch.jpg'),
                         ),
                       ),
                       //child: Image.asset('assets/images/gitam.png'),
@@ -537,17 +522,18 @@ class EduMob extends StatelessWidget {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.center,
               mainAxisAlignment: MainAxisAlignment.center,
-              children: [
+              children: const [
                 Text(
-                  "Narayana Junior College, Hyderabad",
+                  "SHRI GANESH SR. SEC. SCHOOL BARAN",
+                  textAlign: TextAlign.center,
                   style: TextStyle(fontSize: 22, fontWeight: FontWeight.bold),
                 ),
                 Text(
-                  "Board of Intermediate Education Telangana",
+                  "Rajasthan Board of Secondary Education",
                   style: TextStyle(fontSize: 18, fontWeight: FontWeight.w600),
                 ),
                 Text(
-                  "2015 - 2017",
+                  "High School: 2019",
                   style: TextStyle(
                     fontSize: 17,
                   ),
@@ -555,7 +541,7 @@ class EduMob extends StatelessWidget {
               ],
             ),
           ),
-          SizedBox(
+          const SizedBox(
             height: 20,
           ),
           SingleChildScrollView(
@@ -565,8 +551,8 @@ class EduMob extends StatelessWidget {
                 children: [
                   Center(
                     child: Container(
-                      margin: EdgeInsets.all(10),
-                      padding: EdgeInsets.all(5.0),
+                      margin: const EdgeInsets.all(10),
+                      padding: const EdgeInsets.all(5.0),
                       height: 100,
                       width: 100,
                       alignment: Alignment.center,
@@ -576,16 +562,16 @@ class EduMob extends StatelessWidget {
                             color: Colors.black.withOpacity(0.1),
                             blurRadius: 10.0,
                             spreadRadius: 5.0,
-                            offset: Offset(
+                            offset: const Offset(
                               0.0, // Move to right 10  horizontally
                               10.0, // Move to bottom 10 Vertically
                             ),
                           ),
                         ],
                         shape: BoxShape.circle,
-                        image: DecorationImage(
+                        image: const DecorationImage(
                           fit: BoxFit.fill,
-                          image: AssetImage('assets/images/school.png'),
+                          image: AssetImage('assets/images/int_sch.jpg'),
                         ),
                       ),
                       //child: Image.asset('assets/images/gitam.png'),
@@ -599,17 +585,18 @@ class EduMob extends StatelessWidget {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.center,
               mainAxisAlignment: MainAxisAlignment.center,
-              children: [
+              children: const [
                 Text(
-                  "St. John's High School, Karimnagar",
+                  "MAA SHARDHA SR. SEC. SCHOOL BARAN",
+                  textAlign: TextAlign.center,
                   style: TextStyle(fontSize: 22, fontWeight: FontWeight.bold),
                 ),
                 Text(
-                  "Board of Secondary Education Telangana",
+                  "Rajasthan Board of Secondary Education",
                   style: TextStyle(fontSize: 18, fontWeight: FontWeight.w600),
                 ),
                 Text(
-                  "2015",
+                  "Intermediate: 2016",
                   style: TextStyle(
                     fontSize: 17,
                   ),
@@ -617,7 +604,7 @@ class EduMob extends StatelessWidget {
               ],
             ),
           ),
-          SizedBox(
+          const SizedBox(
             height: 20,
           ),
         ],

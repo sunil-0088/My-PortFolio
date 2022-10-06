@@ -72,18 +72,12 @@ class NavbarTbDt extends StatelessWidget {
                   SizedBox(
                     width: 30,
                   ),
-                  // NavbarItem('Proficiency', ProficiencyRoute),
-                  // SizedBox(
-                  //   width: 30,
-                  // ),
-                  NavbarItem('Achievements', AchievementsRoute),
+                  
+                  NavbarItem('Projects', AchievementsRoute),
                   SizedBox(
                     width: 30,
                   ),
-                  NavbarItem('Blogs', BlogRoute),
-                  SizedBox(
-                    width: 30,
-                  ),
+                 
                   NavbarItem('Contact', ContactRoute),
                   SizedBox(
                     width: 10,

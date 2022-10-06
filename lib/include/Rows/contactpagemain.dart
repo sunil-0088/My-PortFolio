@@ -31,10 +31,7 @@ class ContactPageDesk extends StatelessWidget {
           ),
           Row(
             children: const [
-              Text(
-                '☎️',
-                style: TextStyle(color: Colors.grey, fontSize: 28),
-              ),
+              Icon(Icons.phone),
               SizedBox(
                 width: 10,
               ),
@@ -52,10 +49,7 @@ class ContactPageDesk extends StatelessWidget {
           ),
           Row(
             children: const [
-              Text(
-                '✉️',
-                style: TextStyle(color: Colors.grey, fontSize: 28),
-              ),
+              Icon(Icons.mail),
               SizedBox(
                 width: 10,
               ),
@@ -190,10 +184,7 @@ class ContactPageTab extends StatelessWidget {
             ),
             Row(
               children: const [
-                Text(
-                  '☎️',
-                  style: TextStyle(color: Colors.grey, fontSize: 28),
-                ),
+                Icon(Icons.phone),
                 SizedBox(
                   width: 10,
                 ),
@@ -211,10 +202,7 @@ class ContactPageTab extends StatelessWidget {
             ),
             Row(
               children: const [
-                Text(
-                  '✉️',
-                  style: TextStyle(color: Colors.grey, fontSize: 28),
-                ),
+                Icon(Icons.mail),
                 SizedBox(
                   width: 10,
                 ),
@@ -351,10 +339,7 @@ class ContactPageMob extends StatelessWidget {
             Row(
               mainAxisAlignment: MainAxisAlignment.start,
               children: const [
-                Text(
-                  '☎️',
-                  style: TextStyle(color: Colors.grey, fontSize: 22),
-                ),
+                Icon(Icons.phone),
                 SizedBox(
                   width: 10,
                 ),
@@ -373,12 +358,7 @@ class ContactPageMob extends StatelessWidget {
             Row(
               mainAxisAlignment: MainAxisAlignment.start,
               children: [
-                Container(
-                  child: const Text(
-                    '✉️',
-                    style: TextStyle(color: Colors.grey, fontSize: 22),
-                  ),
-                ),
+                Icon(Icons.mail),
                 const SizedBox(
                   width: 10,
                 ),

@@ -1,18 +1,14 @@
-import 'package:my_portfolio/configure/centeredview.dart';
 import 'package:my_portfolio/include/CenteringOfPages/Achievement.dart';
 import 'package:my_portfolio/include/CenteringOfPages/Blogcenter.dart';
 import 'package:my_portfolio/include/CenteringOfPages/ContactCenter.dart';
 import 'package:my_portfolio/include/CenteringOfPages/Education.dart';
 import 'package:my_portfolio/include/CenteringOfPages/skills_desk.dart';
-import 'package:my_portfolio/include/Rows/contactpagemain.dart';
-import 'package:my_portfolio/include/Rows/educationmain.dart';
+
 import 'package:my_portfolio/include/imagesmain/images.dart';
 import 'package:my_portfolio/include/Rows/progressbarmain.dart';
 import 'package:my_portfolio/include/Rows/skillslogosmain.dart';
 import 'package:my_portfolio/include/Rows/welcomepagemain.dart';
-import 'package:my_portfolio/pages/blogpage.dart';
-import 'package:my_portfolio/pages/contactpage.dart';
-import 'package:my_portfolio/pages/educationpage.dart';
+
 import 'package:my_portfolio/pages/footer.dart';
 import 'package:my_portfolio/pages/progresspage.dart';
 import 'package:my_portfolio/pages/welcome.dart';
@@ -26,7 +22,7 @@ class HomeDesktop extends StatefulWidget {
 }
 
 class _HomeDesktopState extends State<HomeDesktop> {
-  var _controller = ScrollController();
+  final _controller = ScrollController();
 
   @override
   void initState() {
@@ -46,6 +42,7 @@ class _HomeDesktopState extends State<HomeDesktop> {
       child: Scrollbar(
         controller: _controller,
         child: SingleChildScrollView(
+          controller: _controller,
           child: Column(
             mainAxisSize: MainAxisSize.min,
             children: [
@@ -97,20 +94,11 @@ class _HomeDesktopState extends State<HomeDesktop> {
                     const SizedBox(
                       height: 75,
                     ),
+                    
                     Row(
                       children: const [
-                        Expanded(child: BlogCenterDesk()),
-                      ],
-                    ),
-                    const SizedBox(
-                      height: 75,
-                    ),
-                    Row(
-                      children: [
-                        const Expanded(flex: 2, child: ContactCenterDesk()),
-                        Expanded(
-                          child: FourDesk(),
-                        ),
+                        Expanded(child: ContactCenterDesk()),
+                       
                       ],
                     ),
                     const SizedBox(
@@ -153,7 +141,7 @@ class HomeMobile extends StatelessWidget {
                 const ProgressPage(),
                 const EducationMob(),
                 const AchievementMob(),
-                const BlogCenterMob(),
+                
                 const ContactCenterMob(),
                 const SizedBox(
                   height: 50,
@@ -189,7 +177,7 @@ class HomeTab extends StatelessWidget {
                 const ProgressPage(),
                 const EducationTab(),
                 const AchievementTab(),
-                const BlogCenterTab(),
+          
                 const ContactCenterTab(),
                 const SizedBox(
                   height: 50,

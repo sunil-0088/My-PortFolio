@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'dart:js' as js;
 
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:my_portfolio/configure/routing.dart';
 
 class AchieveDesk extends StatelessWidget {
   @override
@@ -10,34 +11,34 @@ class AchieveDesk extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Text(
-            'Achievements 🏆',
+          const Text(
+            'Projects',
             style: TextStyle(fontWeight: FontWeight.w600, fontSize: 50),
           ),
-          SizedBox(
+          const SizedBox(
             height: 10,
           ),
-          Text(
-            'ACHIEVEMENTS, CERTIFICATIONS AND SOME COOL STUFF THAT I HAVE DONE !',
+          const Text(
+            'PROJECTS AND SOME COOL STUFF THAT I HAVE DONE !',
             style: TextStyle(color: Colors.grey, fontSize: 22),
           ),
-          SizedBox(
+          const SizedBox(
             height: 25,
           ),
           SingleChildScrollView(
             scrollDirection: Axis.horizontal,
             child: Container(
-              height: 350,
-              width: 1000,
+              height: 320,
+              // width: 1000,
               child: Row(
                 children: [
-                  SizedBox(
+                  const SizedBox(
                     width: 25,
                   ),
                   Container(
                     width: 450,
                     height: 300,
-                    padding: EdgeInsets.fromLTRB(20, 20, 20, 20),
+                    padding: const EdgeInsets.all(20),
                     decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(5),
                         color: Colors.white.withOpacity(0.5),
@@ -46,7 +47,7 @@ class AchieveDesk extends StatelessWidget {
                             color: Colors.black.withOpacity(0.1),
                             blurRadius: 10.0,
                             spreadRadius: 5,
-                            offset: Offset(
+                            offset: const Offset(
                               5.0, // Move to right 10  horizontally
                               5.0, // Move to bottom 10 Vertically
                             ),
@@ -55,39 +56,54 @@ class AchieveDesk extends StatelessWidget {
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.center,
                       children: [
-                        Image.network(
-                          'https://lh3.googleusercontent.com/rSQpAc0Z3nv8cIEub9qYcAbKUvUTelb3HdPhGaToFW6Mqwgap9oqHdXdMaWwYLx44A=s180-rw',
-                          width: 250,
-                          height: 175,
-                        ),
-                        Text(
-                          'Walls',
+                        const Text(
+                          'My PortFolio',
                           style: TextStyle(
-                              fontSize: 30, fontWeight: FontWeight.w700),
-                          textAlign: TextAlign.center,
+                              fontSize: 20,
+                              fontWeight: FontWeight.bold,
+                              color: Colors.blue),
                         ),
-                        InkWell(
-                            onTap: () {
-                              js.context.callMethod("open", [
-                                "https://play.google.com/store/apps/details?id=com.naveenjujaray.walls"
-                              ]);
+                        const Icon(
+                          FontAwesomeIcons.peopleGroup,
+                          size: 100,
+                          color: Colors.redAccent,
+                        ),
+                        Container(
+                          width: 410,
+                          height: 75,
+                          margin: const EdgeInsets.symmetric(
+                              horizontal: 5, vertical: 10),
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: const [
+                              Text(
+                                'It is an online portfolio website made with flutter.it represents what I have created and my skills and experiences.',
+                                style: TextStyle(color: Colors.grey),
+                              ),
+                              Text(
+                                'Tools uses: Flutter, Dart, Open URL service.',
+                                style: TextStyle(
+                                    color: Colors.grey,
+                                    fontWeight: FontWeight.bold),
+                              ),
+                            ],
+                          ),
+                        ),
+                        ElevatedButton(
+                            onPressed: () {
+                              Navigator.pushNamed(context, HomeRoute);
                             },
-                            child: Text(
-                              'Available on Playstore',
-                              style: TextStyle(
-                                  fontSize: 18, color: Colors.green[900]),
-                              textAlign: TextAlign.center,
-                            )),
+                            child: const Text('Check it out'))
                       ],
                     ),
                   ),
-                  SizedBox(
+                  const SizedBox(
                     width: 25,
                   ),
                   Container(
                     width: 450,
                     height: 300,
-                    padding: EdgeInsets.fromLTRB(20, 20, 20, 20),
+                    padding: const EdgeInsets.all(20),
                     decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(5),
                         color: Colors.white.withOpacity(0.5),
@@ -96,7 +112,7 @@ class AchieveDesk extends StatelessWidget {
                             color: Colors.black.withOpacity(0.1),
                             blurRadius: 10.0,
                             spreadRadius: 5,
-                            offset: Offset(
+                            offset: const Offset(
                               5.0, // Move to right 10  horizontally
                               5.0, // Move to bottom 10 Vertically
                             ),
@@ -105,31 +121,113 @@ class AchieveDesk extends StatelessWidget {
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.center,
                       children: [
-                        Icon(
-                          FontAwesomeIcons.bloggerB,
-                          size: 170,
+                        const Text(
+                          'Meals APP',
+                          style: TextStyle(
+                              fontSize: 20,
+                              fontWeight: FontWeight.bold,
+                              color: Colors.blue),
+                        ),
+                        const Icon(
+                          FontAwesomeIcons.bowlFood,
+                          size: 100,
                           color: Colors.redAccent,
                         ),
-                        SizedBox(
-                          height: 5,
+                        Container(
+                          width: 410,
+                          height: 75,
+                          margin: const EdgeInsets.symmetric(
+                              horizontal: 5, vertical: 10),
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: const [
+                              Text(
+                                'It is a Android Mobile Application which built in flutter.It provide list of many meal recipes to User.',
+                                style: TextStyle(color: Colors.grey),
+                              ),
+                              Text(
+                                'Tools uses: Flutter, Dart, Firebase Database, SQLite;',
+                                style: TextStyle(
+                                    color: Colors.grey,
+                                    fontWeight: FontWeight.bold),
+                              ),
+                            ],
+                          ),
                         ),
-                        Text(
-                          'Blog',
-                          style: TextStyle(
-                              fontSize: 30, fontWeight: FontWeight.w700),
-                          textAlign: TextAlign.center,
-                        ),
-                        InkWell(
-                            onTap: () {
-                              js.context.callMethod(
-                                  "open", ["https://naveenjujaray.js.org"]);
+                        ElevatedButton(
+                            onPressed: () {
+                              js.context.callMethod("open",
+                                  ["https://github.com/sunil-0088/MealsApp"]);
                             },
-                            child: Text(
-                              'Check it out !',
-                              style: TextStyle(
-                                  fontSize: 18, color: Colors.green[900]),
-                              textAlign: TextAlign.center,
-                            )),
+                            child: const Text('Check it out'))
+                      ],
+                    ),
+                  ),
+                  const SizedBox(
+                    width: 25,
+                  ),
+                  Container(
+                    width: 450,
+                    height: 300,
+                    padding: const EdgeInsets.all(20),
+                    decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(5),
+                        color: Colors.white.withOpacity(0.5),
+                        boxShadow: [
+                          BoxShadow(
+                            color: Colors.black.withOpacity(0.1),
+                            blurRadius: 10.0,
+                            spreadRadius: 5,
+                            offset: const Offset(
+                              5.0, // Move to right 10  horizontally
+                              5.0, // Move to bottom 10 Vertically
+                            ),
+                          ),
+                        ]),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      children: [
+                        const Text(
+                          'Weather',
+                          style: TextStyle(
+                              fontSize: 20,
+                              fontWeight: FontWeight.bold,
+                              color: Colors.blue),
+                        ),
+                        const Icon(
+                          FontAwesomeIcons.cloudRain,
+                          size: 100,
+                          color: Colors.redAccent,
+                        ),
+                        Container(
+                          width: 410,
+                          height: 75,
+                          margin: const EdgeInsets.symmetric(
+                              horizontal: 5, vertical: 10),
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: const [
+                              Text(
+                                'It is an Android App built in Flutter. It provides real-time weather information like atmospheric pressure,precipitation.',
+                                overflow: TextOverflow.clip,
+                                style: TextStyle(color: Colors.grey),
+                              ),
+                              Text(
+                                'Tools uses: Flutter, Dart, Open Weather REST API',
+                                style: TextStyle(
+                                    color: Colors.grey,
+                                    fontWeight: FontWeight.bold),
+                              ),
+                            ],
+                          ),
+                        ),
+                        ElevatedButton(
+                            onPressed: () {
+                              js.context.callMethod("open", [
+                                "https://github.com/sunil-0088/Weather_App"
+                              ]);
+                            },
+                            child: const Text('Check it out'))
                       ],
                     ),
                   ),
@@ -153,14 +251,14 @@ class AchieveTab extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             const Text(
-              'Achievements 🏆',
+              'Projects',
               style: TextStyle(fontWeight: FontWeight.w600, fontSize: 50),
             ),
             const SizedBox(
               height: 10,
             ),
             const Text(
-              'ACHIEVEMENTS, CERTIFICATIONS AND SOME COOL STUFF THAT I HAVE DONE !',
+              'PROJECTS AND SOME COOL STUFF THAT I HAVE DONE !',
               style: TextStyle(color: Colors.grey, fontSize: 22),
             ),
             const SizedBox(
@@ -168,117 +266,210 @@ class AchieveTab extends StatelessWidget {
             ),
             SingleChildScrollView(
               scrollDirection: Axis.vertical,
-              child: Container(
-                child: Center(
-                  child: Column(
-                    children: [
-                      SizedBox(
-                        height: 25,
-                      ),
-                      Container(
-                        width: 450,
-                        height: 300,
-                        padding: EdgeInsets.fromLTRB(20, 20, 20, 20),
-                        decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(5),
-                            color: Colors.white.withOpacity(0.5),
-                            boxShadow: [
-                              BoxShadow(
-                                color: Colors.black.withOpacity(0.1),
-                                blurRadius: 10.0,
-                                spreadRadius: 5,
-                                offset: Offset(
-                                  5.0, // Move to right 10  horizontally
-                                  5.0, // Move to bottom 10 Vertically
-                                ),
+              child: Center(
+                child: Column(
+                  // mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Container(
+                      width: 450,
+                      height: 300,
+                      padding: const EdgeInsets.all(20),
+                      decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(5),
+                          color: Colors.white.withOpacity(0.5),
+                          boxShadow: [
+                            BoxShadow(
+                              color: Colors.black.withOpacity(0.1),
+                              blurRadius: 10.0,
+                              spreadRadius: 5,
+                              offset: const Offset(
+                                5.0, // Move to right 10  horizontally
+                                5.0, // Move to bottom 10 Vertically
                               ),
-                            ]),
-                        child: Column(
-                          crossAxisAlignment: CrossAxisAlignment.center,
-                          children: [
-                            Image.network(
-                              'https://lh3.googleusercontent.com/rSQpAc0Z3nv8cIEub9qYcAbKUvUTelb3HdPhGaToFW6Mqwgap9oqHdXdMaWwYLx44A=s180-rw',
-                              width: 250,
-                              height: 175,
                             ),
-                            Text(
-                              'Walls',
-                              style: TextStyle(
-                                  fontSize: 30, fontWeight: FontWeight.w700),
-                              textAlign: TextAlign.center,
-                            ),
-                            InkWell(
-                                onTap: () {
-                                  js.context.callMethod("open", [
-                                    "https://play.google.com/store/apps/details?id=com.naveenjujaray.walls"
-                                  ]);
-                                },
-                                child: Text(
-                                  'Available on Playstore',
-                                  style: TextStyle(
-                                      fontSize: 18, color: Colors.green[900]),
-                                  textAlign: TextAlign.center,
-                                )),
-                          ],
-                        ),
-                      ),
-                      SizedBox(
-                        height: 25,
-                      ),
-                      Container(
-                        width: 450,
-                        height: 300,
-                        padding: EdgeInsets.fromLTRB(20, 20, 20, 20),
-                        decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(5),
-                            color: Colors.white.withOpacity(0.5),
-                            boxShadow: [
-                              BoxShadow(
-                                color: Colors.black.withOpacity(0.1),
-                                blurRadius: 10.0,
-                                spreadRadius: 5,
-                                offset: Offset(
-                                  5.0, // Move to right 10  horizontally
-                                  5.0, // Move to bottom 10 Vertically
+                          ]),
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.center,
+                        children: [
+                          const Text(
+                            'My PortFolio',
+                            style: TextStyle(
+                                fontSize: 20,
+                                fontWeight: FontWeight.bold,
+                                color: Colors.blue),
+                          ),
+                          const Icon(
+                            FontAwesomeIcons.peopleGroup,
+                            size: 100,
+                            color: Colors.redAccent,
+                          ),
+                          Container(
+                            width: 410,
+                            height: 75,
+                            margin: const EdgeInsets.symmetric(
+                                horizontal: 5, vertical: 10),
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: const [
+                                Text(
+                                  'It is an online portfolio website made with flutter.it represents what I have created and my skills and experiences.',
+                                  style: TextStyle(color: Colors.grey),
                                 ),
-                              ),
-                            ]),
-                        child: Column(
-                          crossAxisAlignment: CrossAxisAlignment.center,
-                          children: [
-                            Icon(
-                              FontAwesomeIcons.bloggerB,
-                              size: 170,
-                              color: Colors.redAccent,
-                            ),
-                            SizedBox(
-                              height: 5,
-                            ),
-                            Text(
-                              'Blog',
-                              style: TextStyle(
-                                  fontSize: 30, fontWeight: FontWeight.w700),
-                              textAlign: TextAlign.center,
-                            ),
-                            InkWell(
-                                onTap: () {
-                                  js.context.callMethod(
-                                      "open", ["https://naveenjujaray.js.org"]);
-                                },
-                                child: Text(
-                                  'Check it out !',
+                                Text(
+                                  'Tools uses: Flutter, Dart, Open URL service.',
                                   style: TextStyle(
-                                      fontSize: 18, color: Colors.green[900]),
-                                  textAlign: TextAlign.center,
-                                )),
-                          ],
-                        ),
+                                      color: Colors.grey,
+                                      fontWeight: FontWeight.bold),
+                                ),
+                              ],
+                            ),
+                          ),
+                          ElevatedButton(
+                              onPressed: () {
+                                Navigator.pushNamed(context, HomeRoute);
+                              },
+                              child: const Text('Check it out'))
+                        ],
                       ),
-                      SizedBox(
-                        height: 25,
+                    ),
+                    const SizedBox(
+                      height: 25,
+                    ),
+                    Container(
+                      width: 450,
+                      height: 300,
+                      padding: const EdgeInsets.all(20),
+                      decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(5),
+                          color: Colors.white.withOpacity(0.5),
+                          boxShadow: [
+                            BoxShadow(
+                              color: Colors.black.withOpacity(0.1),
+                              blurRadius: 10.0,
+                              spreadRadius: 5,
+                              offset: const Offset(
+                                5.0, // Move to right 10  horizontally
+                                5.0, // Move to bottom 10 Vertically
+                              ),
+                            ),
+                          ]),
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.center,
+                        children: [
+                          const Text(
+                            'Meals APP',
+                            style: TextStyle(
+                                fontSize: 20,
+                                fontWeight: FontWeight.bold,
+                                color: Colors.blue),
+                          ),
+                          const Icon(
+                            FontAwesomeIcons.bowlFood,
+                            size: 100,
+                            color: Colors.redAccent,
+                          ),
+                          Container(
+                            width: 410,
+                            height: 75,
+                            margin: const EdgeInsets.symmetric(
+                                horizontal: 5, vertical: 10),
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: const [
+                                Text(
+                                  'It is a Android Mobile Application which built in flutter.It provide list of many meal recipes to User.',
+                                  style: TextStyle(color: Colors.grey),
+                                ),
+                                Text(
+                                  'Tools uses: Flutter, Dart, Firebase Database, SQLite;',
+                                  style: TextStyle(
+                                      color: Colors.grey,
+                                      fontWeight: FontWeight.bold),
+                                ),
+                              ],
+                            ),
+                          ),
+                          ElevatedButton(
+                              onPressed: () {
+                                js.context.callMethod("open",
+                                    ["https://github.com/sunil-0088/MealsApp"]);
+                              },
+                              child: const Text('Check it out'))
+                        ],
                       ),
-                    ],
-                  ),
+                    ),
+                    const SizedBox(
+                      height: 25,
+                    ),
+                    Container(
+                      width: 450,
+                      height: 300,
+                      padding: const EdgeInsets.all(20),
+                      decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(5),
+                          color: Colors.white.withOpacity(0.5),
+                          boxShadow: [
+                            BoxShadow(
+                              color: Colors.black.withOpacity(0.1),
+                              blurRadius: 10.0,
+                              spreadRadius: 5,
+                              offset: const Offset(
+                                5.0, // Move to right 10  horizontally
+                                5.0, // Move to bottom 10 Vertically
+                              ),
+                            ),
+                          ]),
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.center,
+                        children: [
+                          const Text(
+                            'Weather',
+                            style: TextStyle(
+                                fontSize: 20,
+                                fontWeight: FontWeight.bold,
+                                color: Colors.blue),
+                          ),
+                          const Icon(
+                            FontAwesomeIcons.cloudRain,
+                            size: 100,
+                            color: Colors.redAccent,
+                          ),
+                          Container(
+                            width: 410,
+                            height: 75,
+                            margin: const EdgeInsets.symmetric(
+                                horizontal: 5, vertical: 10),
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: const [
+                                Text(
+                                  'It is an Android App built in Flutter. It provides real-time weather information like atmospheric pressure,precipitation.',
+                                  overflow: TextOverflow.clip,
+                                  style: TextStyle(color: Colors.grey),
+                                ),
+                                Text(
+                                  'Tools uses: Flutter, Dart, Open Weather REST API',
+                                  style: TextStyle(
+                                      color: Colors.grey,
+                                      fontWeight: FontWeight.bold),
+                                ),
+                              ],
+                            ),
+                          ),
+                          ElevatedButton(
+                              onPressed: () {
+                                js.context.callMethod("open", [
+                                  "https://github.com/sunil-0088/Weather_App"
+                                ]);
+                              },
+                              child: const Text('Check it out'))
+                        ],
+                      ),
+                    ),
+                    const SizedBox(
+                      height: 25,
+                    ),
+                  ],
                 ),
               ),
             ),
@@ -292,139 +483,235 @@ class AchieveTab extends StatelessWidget {
 class AchieveMob extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
+    final wt = MediaQuery.of(context).size.width;
     return SingleChildScrollView(
       child: Container(
-        width: 600,
+        width: wt - 20,
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Text(
-              'Achievements 🏆',
+            const Text(
+              'Projects',
               style: TextStyle(fontWeight: FontWeight.w600, fontSize: 32),
             ),
-            SizedBox(
+            const SizedBox(
               height: 10,
             ),
-            Text(
-              'ACHIEVEMENTS, CERTIFICATIONS AND SOME COOL STUFF THAT I HAVE DONE !',
+            const Text(
+              'PROJECTS AND SOME COOL STUFF THAT I HAVE DONE !',
               style: TextStyle(color: Colors.grey, fontSize: 18),
             ),
-            SizedBox(
+            const SizedBox(
               height: 25,
             ),
             SingleChildScrollView(
               scrollDirection: Axis.vertical,
-              child: Container(
-                child: Center(
-                  child: Column(
-                    children: [
-                      SizedBox(
-                        height: 25,
-                      ),
-                      Container(
-                        width: 400,
-                        height: 250,
-                        padding: EdgeInsets.fromLTRB(20, 20, 20, 20),
-                        decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(5),
-                            color: Colors.white.withOpacity(0.5),
-                            boxShadow: [
-                              BoxShadow(
-                                color: Colors.black.withOpacity(0.1),
-                                blurRadius: 10.0,
-                                spreadRadius: 5,
-                                offset: Offset(
-                                  5.0, // Move to right 10  horizontally
-                                  5.0, // Move to bottom 10 Vertically
-                                ),
+              child: Center(
+                child: Column(
+                  children: [
+                    Container(
+                      width: wt - 100,
+                      height: 400,
+                      padding: const EdgeInsets.all(20),
+                      decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(5),
+                          color: Colors.white.withOpacity(0.5),
+                          boxShadow: [
+                            BoxShadow(
+                              color: Colors.black.withOpacity(0.1),
+                              blurRadius: 10.0,
+                              spreadRadius: 5,
+                              offset: const Offset(
+                                5.0, // Move to right 10  horizontally
+                                5.0, // Move to bottom 10 Vertically
                               ),
-                            ]),
-                        child: Column(
-                          crossAxisAlignment: CrossAxisAlignment.center,
-                          children: [
-                            Image.network(
-                              'https://lh3.googleusercontent.com/rSQpAc0Z3nv8cIEub9qYcAbKUvUTelb3HdPhGaToFW6Mqwgap9oqHdXdMaWwYLx44A=s180-rw',
-                              width: 200,
-                              height: 125,
                             ),
-                            Text(
-                              'Walls',
-                              style: TextStyle(
-                                  fontSize: 30, fontWeight: FontWeight.w700),
-                              textAlign: TextAlign.center,
-                            ),
-                            InkWell(
-                                onTap: () {
-                                  js.context.callMethod("open", [
-                                    "https://play.google.com/store/apps/details?id=com.naveenjujaray.walls"
-                                  ]);
-                                },
-                                child: Text(
-                                  'Available on Playstore',
-                                  style: TextStyle(
-                                      fontSize: 18, color: Colors.green[900]),
-                                  textAlign: TextAlign.center,
-                                )),
-                          ],
-                        ),
-                      ),
-                      SizedBox(
-                        height: 25,
-                      ),
-                      Container(
-                        width: 400,
-                        height: 250,
-                        padding: EdgeInsets.fromLTRB(20, 20, 20, 20),
-                        decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(5),
-                            color: Colors.white.withOpacity(0.5),
-                            boxShadow: [
-                              BoxShadow(
-                                color: Colors.black.withOpacity(0.1),
-                                blurRadius: 10.0,
-                                spreadRadius: 5,
-                                offset: Offset(
-                                  5.0, // Move to right 10  horizontally
-                                  5.0, // Move to bottom 10 Vertically
+                          ]),
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.center,
+                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                        children: [
+                          const Text(
+                            'My PortFolio',
+                            style: TextStyle(
+                                fontSize: 20,
+                                fontWeight: FontWeight.bold,
+                                color: Colors.blue),
+                          ),
+                          const Icon(
+                            FontAwesomeIcons.peopleGroup,
+                            size: 100,
+                            color: Colors.redAccent,
+                          ),
+                          Container(
+                            width: wt - 140,
+                            height: 100,
+                            margin: const EdgeInsets.symmetric(
+                                horizontal: 5, vertical: 10),
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: const [
+                                Text(
+                                  'It is an online portfolio website made with flutter.it represents what I have created and my skills and experiences.',
+                                  style: TextStyle(color: Colors.grey),
                                 ),
-                              ),
-                            ]),
-                        child: Column(
-                          crossAxisAlignment: CrossAxisAlignment.center,
-                          children: [
-                            Icon(
-                              FontAwesomeIcons.bloggerB,
-                              size: 120,
-                              color: Colors.redAccent,
-                            ),
-                            SizedBox(
-                              height: 5,
-                            ),
-                            Text(
-                              'Blog',
-                              style: TextStyle(
-                                  fontSize: 30, fontWeight: FontWeight.w700),
-                              textAlign: TextAlign.center,
-                            ),
-                            InkWell(
-                                onTap: () {
-                                  js.context.callMethod(
-                                      "open", ["https://naveenjujaray.js.org"]);
-                                },
-                                child: Text(
-                                  'Check it out !',
+                                Text(
+                                  'Tools uses: Flutter, Dart, Open URL service.',
                                   style: TextStyle(
-                                      fontSize: 18, color: Colors.green[900]),
-                                  textAlign: TextAlign.center,
-                                )),
-                          ],
-                        ),
+                                      color: Colors.grey,
+                                      fontWeight: FontWeight.bold),
+                                ),
+                              ],
+                            ),
+                          ),
+                          ElevatedButton(
+                              onPressed: () {
+                                Navigator.pushNamed(context, HomeRoute);
+                              },
+                              child: const Text('Check it out'))
+                        ],
                       ),
-                      SizedBox(
-                        height: 25,
+                    ),
+                    const SizedBox(
+                      height: 25,
+                    ),
+                    Container(
+                      width: wt - 100,
+                      height: 400,
+                      padding: const EdgeInsets.all(20),
+                      decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(5),
+                          color: Colors.white.withOpacity(0.5),
+                          boxShadow: [
+                            BoxShadow(
+                              color: Colors.black.withOpacity(0.1),
+                              blurRadius: 10.0,
+                              spreadRadius: 5,
+                              offset: const Offset(
+                                5.0, // Move to right 10  horizontally
+                                5.0, // Move to bottom 10 Vertically
+                              ),
+                            ),
+                          ]),
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.center,
+                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                        children: [
+                          const Text(
+                            'Meals APP',
+                            style: TextStyle(
+                                fontSize: 20,
+                                fontWeight: FontWeight.bold,
+                                color: Colors.blue),
+                          ),
+                          const Icon(
+                            FontAwesomeIcons.bowlFood,
+                            size: 100,
+                            color: Colors.redAccent,
+                          ),
+                          Container(
+                            width: wt - 140,
+                            height: 100,
+                            margin: const EdgeInsets.symmetric(
+                                horizontal: 5, vertical: 10),
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: const [
+                                Text(
+                                  'It is a Android Mobile Application which built in flutter.It provide list of many meal recipes to User.',
+                                  style: TextStyle(color: Colors.grey),
+                                ),
+                                Text(
+                                  'Tools uses: Flutter, Dart, Firebase Database, SQLite;',
+                                  style: TextStyle(
+                                      color: Colors.grey,
+                                      fontWeight: FontWeight.bold),
+                                ),
+                              ],
+                            ),
+                          ),
+                          ElevatedButton(
+                              onPressed: () {
+                                js.context.callMethod("open",
+                                    ["https://github.com/sunil-0088/MealsApp"]);
+                              },
+                              child: const Text('Check it out'))
+                        ],
                       ),
-                    ],
-                  ),
+                    ),
+                    const SizedBox(
+                      height: 25,
+                    ),
+                    Container(
+                      width: wt - 100,
+                      height: 400,
+                      padding: const EdgeInsets.all(20),
+                      decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(5),
+                          color: Colors.white.withOpacity(0.5),
+                          boxShadow: [
+                            BoxShadow(
+                              color: Colors.black.withOpacity(0.1),
+                              blurRadius: 10.0,
+                              spreadRadius: 5,
+                              offset: const Offset(
+                                5.0, // Move to right 10  horizontally
+                                5.0, // Move to bottom 10 Vertically
+                              ),
+                            ),
+                          ]),
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.center,
+                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                        children: [
+                          const Text(
+                            'Weather',
+                            style: TextStyle(
+                                fontSize: 20,
+                                fontWeight: FontWeight.bold,
+                                color: Colors.blue),
+                          ),
+                          const Icon(
+                            FontAwesomeIcons.cloudRain,
+                            size: 100,
+                            color: Colors.redAccent,
+                          ),
+                          Container(
+                            width: wt - 140,
+                            height: 100,
+                            margin: const EdgeInsets.symmetric(
+                                horizontal: 5, vertical: 10),
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: const [
+                                Text(
+                                  'It is an Android App built in Flutter. It provides real-time weather information like atmospheric pressure,precipitation.',
+                                  overflow: TextOverflow.clip,
+                                  style: TextStyle(color: Colors.grey),
+                                ),
+                                Text(
+                                  'Tools uses: Flutter, Dart, Open Weather REST API',
+                                  style: TextStyle(
+                                      color: Colors.grey,
+                                      fontWeight: FontWeight.bold),
+                                ),
+                              ],
+                            ),
+                          ),
+                          ElevatedButton(
+                              onPressed: () {
+                                js.context.callMethod("open", [
+                                  "https://github.com/sunil-0088/Weather_App"
+                                ]);
+                              },
+                              child: const Text('Check it out'))
+                        ],
+                      ),
+                    ),
+                    const SizedBox(
+                      height: 25,
+                    ),
+                  ],
                 ),
               ),
             ),
